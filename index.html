@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | ViewImage</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" style="width: 800px; height: 500px; background: #231F20"></canvas>
+    <script src="Build/DisplayImage.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/DisplayImage.data.unityweb",
+        frameworkUrl: "Build/DisplayImage.framework.js.unityweb",
+        codeUrl: "Build/DisplayImage.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "ViewImage",
+        productVersion: "1.0",
+      });
+    </script>
+  </body>
+</html>
